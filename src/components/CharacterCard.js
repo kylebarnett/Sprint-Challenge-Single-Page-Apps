@@ -16,7 +16,7 @@ export default function CharacterCard(props) {
       <Card.Content extra>
         <a>
           <Icon name='user' />
-          10 Friends
+          Episodes
   </a>
       </Card.Content>
     </Card>
