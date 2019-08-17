@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Icon, Image, Card } from 'semantic-ui-react';
+import { Icon, Image, Card } from 'semantic-ui-react';
 
 
 export default function CharacterCard(props) {
