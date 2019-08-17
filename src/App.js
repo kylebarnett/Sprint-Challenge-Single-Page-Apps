@@ -4,6 +4,7 @@ import Header from "./components/Header.js";
 import AppRouter from "./components/AppRouter.js";
 import CharacterList from './components/CharacterList';
 import LocationsList from './components/LocationsList';
+import EpisodeList from './components/EpisodeList';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <Header />
       <CharacterList />
       <LocationsList />
+      <EpisodeList />
       {/* <TabNav /> */}
       {/* <AppRouter /> */}
     </main>
