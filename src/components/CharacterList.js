@@ -11,11 +11,13 @@ export default function CharacterList() {
   useEffect(() => {
     // TODO: Add AJAX/API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    axios
-      .get('https://rickandmortyapi.com/api/character/')
-      .then(res => setCharacters(res.data.results))
-      .catch(err => console.log(err))
+    setTimeout(() => {
+      axios
+        .get('https://rickandmortyapi.com/api/character/')
+        .then(res => setCharacters(res.data.results))
+        .catch(err => console.log(err))
       setIsLoading(false)
+    }, 1000)
   }, []);
 
   const changeHandler = event => {

@@ -8,15 +8,17 @@ export default function EpisodeList() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    axios
-      .get('https://rickandmortyapi.com/api/episode/')
-      .then(res => setEpisodes(res.data.results))
-      .catch(err => console.log(err))
+    setTimeout(() => {
+      axios
+        .get('https://rickandmortyapi.com/api/episode/')
+        .then(res => setEpisodes(res.data.results))
+        .catch(err => console.log(err))
       setIsLoading(false)
+    }, 1000)
   })
   return (
     <section className="character-list grid-view">
-    {isLoading && <h1>Loading Episodes...</h1>}
+      {isLoading && <h1>Loading Episodes...</h1>}
       {episodes.map(episode => (
         <EpisodeCard key={episode.id} episode={episode} />
       ))}
